@@ -138,8 +138,8 @@ DEPENDENCIES
   jekyll
   jekyll-paginate
   jekyll-watch
+  kramdown
   octopress-autoprefixer
-  redcarpet
   sass
 
 BUNDLED WITH

@@ -6,7 +6,7 @@ description: ""
 baseurl:     ""
 url:         "http://engineering.wework.com"
 
-gems: [jekyll-paginate, jekyll-watch, redcarpet, octopress-autoprefixer]
+gems: [jekyll-paginate, jekyll-watch, kramdown, octopress-autoprefixer]
 
 # Permalinks
 permalink:        pretty
@@ -51,9 +51,7 @@ share_reddit: true
 share_stumbleupon: false
 
 # Build settings
-markdown:     redcarpet
-redcarpet:
-  extensions: ['smart', 'tables', 'with_toc_data']
+markdown:     kramdown
 permalink:    pretty
 paginate:     3
 sass:
