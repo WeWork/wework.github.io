@@ -9,7 +9,7 @@ categories:   frontend
 
 There are plenty of options to choose from when it comes to frontend methodologies.  As I've learned while working with Ember and React.js, web interfaces are composed of powerful components.  When thinking about how to approach the organization of a project, I feel the CSS for each component needs to be just as concise and clear as the Javascript that creates it.
 
-Enter BEM: it stands for "Block", "Element", and "Modifier".  This is no new approach, but it's really begun to grow on me.  I've started to create BEM-style "component" stylesheets here at WeWork, and my main goal is to create "blocks" that are independent of each other, wholey reuseable. Remember, a block may be developed as a singular unit, but it can and **should** be able to appear on a page more than once.
+Enter BEM: it stands for "Block", "Element", and "Modifier".  This is no new approach, but it's really begun to grow on me.  I've started to create BEM-style "component" stylesheets here at WeWork, and my main goal is to create "blocks" that are independent of each other, wholly reusable. Remember, a block may be developed as a singular unit, but it can and **should** be able to appear on a page more than once.
 
 A **block** is *independent* and can be utilized on its own or can contain other blocks (ie. `.location-info {}`.) These can be thought of as parents. The children of blocks are their **elements**, written with two underscores (ie. `.location-info__content {}`.)  **Modifiers** specify the type of block that we're dealing with, so that we can style that component without affecting others (ie. `.location-info--with-background`.)
 
@@ -42,7 +42,7 @@ A few things to remember:
 
 ## BEM in Action
 
-The BEM methodology has been very useful within our React components. Seeing as we're already creating objects that are wholey reuseable across the site, it only seems natural to make sure that our CSS is as concise.
+The BEM methodology has been very useful within our React components. Seeing as we're already creating objects that are wholly reusable across the site, it only seems natural to make sure that our CSS is as concise.
 
 I was recently creating a new React component for our "Book a Tour" modal, called LocationInfo.
 

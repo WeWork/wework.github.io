@@ -7,9 +7,9 @@ image:        http://res.cloudinary.com/wework/image/upload/s--xpIlilub--/c_scal
 categories:   process
 ---
 
-There are many great tutorials and boilerplate apps online--linked to in the footer of this post--and even documentation for redux and react itself is fantastic, so for the purposes of this tutorial I'd like to focus on purely how we switched from using reflux to redux in production. You don't necesarilly need a background in Reflux or Redux specifically to understand what's going on, but at least a working knowledge of React and [Flux](https://facebook.github.io/flux/docs/overview.html) is recommended.
+There are many great tutorials and boilerplate apps online--linked to in the footer of this post--and even documentation for redux and react itself is fantastic, so for the purposes of this tutorial I'd like to focus on purely how we switched from using reflux to redux in production. You don't necessarily need a background in Reflux or Redux specifically to understand what's going on, but at least a working knowledge of React and [Flux](https://facebook.github.io/flux/docs/overview.html) is recommended.
 
-Over the last week or so we took the time to convert our ES5 React Reflux implementation of our [location's flow](https://www.wework.com/locations/new-york-city) into a brand spanking new ES6/7 React ***Redux*** implemenation. We'll go over 3 important examples in our data flow: saving the state of the ui in a store, fetching data from an external API to hydrate our store, and filtering data that is already in our store. This might be redundant, but you'll also get some transitioning from ES5 to ES6/ES7 examples built in.
+Over the last week or so we took the time to convert our ES5 React Reflux implementation of our [location's flow](https://www.wework.com/locations/new-york-city) into a brand spanking new ES6/7 React ***Redux*** implementation. We'll go over 3 important examples in our data flow: saving the state of the ui in a store, fetching data from an external API to hydrate our store, and filtering data that is already in our store. This might be redundant, but you'll also get some transitioning from ES5 to ES6/ES7 examples built in.
 
 ## EXAMPLE 1: Store the State of your UI in your...Store
 
@@ -208,7 +208,7 @@ The single store concept can seem a little strange coming from the reflux world.
 }
 ```
 
-With that in mind, lets first build the actionType, action, and reducer in our showFilters module, which will represent the "showFilters" part of the store object written above:
+With that in mind, let's first build the actionType, action, and reducer in our showFilters module, which will represent the "showFilters" part of the store object written above:
 
 ```js
 // src/redux/modules/show_filters.js
@@ -277,7 +277,7 @@ export default combineReducers({
 
 #### Redux: The Setup
 
-Now that we've set up our single store, how do we get it into the application? Unfortunatley, it looks like [mixins are dead](https://medium.com/@dan_abramov/mixins-are-dead-long-live-higher-order-components-94a0d2f9e750) so we can't use the same pattern we were using in the ES5 Reflux example.
+Now that we've set up our single store, how do we get it into the application? Unfortunately, it looks like [mixins are dead](https://medium.com/@dan_abramov/mixins-are-dead-long-live-higher-order-components-94a0d2f9e750) so we can't use the same pattern we were using in the ES5 Reflux example.
 
 Let's start by initializing our Redux store:
 
